@@ -29,23 +29,12 @@ function LandingPage() {
                         </div>
 
                         {/* Kanan - Gambar */}
-                        <div className="w-full md:w-1/2 relative">
-                            <div className="relative h-64 md:h-96">
-                                {/* Kursi */}
-                                <div className="absolute right-12 bottom-0">
-                                    <div className="w-48 h-48 bg-yellow-100 rounded-t-full"></div>
-                                    <div className="absolute bottom-0 left-4 w-2 h-16 bg-amber-800"></div>
-                                    <div className="absolute bottom-0 right-4 w-2 h-16 bg-amber-800"></div>
-                                    <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-24 h-12 bg-gray-400 rounded-lg"></div>
-                                </div>
-
-                                {/* Barang Melayang */}
-                                <div className="absolute top-12 left-12 w-24 h-20 bg-gray-600 rounded-lg"></div>
-                                <div className="absolute top-8 right-8 w-20 h-32 bg-blue-600 rounded-lg -rotate-12"></div>
-                                <div className="absolute bottom-24 right-48 w-16 h-16 bg-green-600 rounded-full">
-                                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-8 bg-green-800"></div>
-                                </div>
-                            </div>
+                        <div className="md:w-1/2 mt-10 md:mt-0 relative z-10">
+                            <img
+                                src="/1234.png"
+                                alt="Product showcase"
+                                className="w-full max-w-lg mx-auto"
+                            />
                         </div>
                     </div>
                 </div>

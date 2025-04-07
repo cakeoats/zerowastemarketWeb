@@ -1,8 +1,14 @@
 import React from 'react';
 import { TextInput, Button } from 'flowbite-react';
-import { HiUser } from 'react-icons/hi';
+import { HiUser, HiLockClosed } from 'react-icons/hi';
 
 function LoginPage() {
+    const handleForgotPassword = (e) => {
+        e.preventDefault();
+        // Tambahkan logika untuk lupa password di sini
+        console.log('Forgot password clicked');
+    };
+
     return (
         <div className="min-h-screen w-full bg-gradient-to-br from-white to-red-400 flex items-center justify-center">
             <div className="bg-white p-10 rounded-lg shadow-lg max-w-md w-full">
@@ -15,34 +21,37 @@ function LoginPage() {
                         <TextInput
                             id="username"
                             type="text"
-                            placeholder="username"
+                            placeholder="Username"
                             icon={HiUser}
                             iconPosition="left"
-                            className="rounded-lg border border-black"
                         />
                     </div>
 
                     {/* Password Input */}
                     <div className="relative">
                         <TextInput
-                            id="username"
-                            type="text"
-                            placeholder="username"
-                            icon={HiUser}
+                            id="password"
+                            type="password"
+                            placeholder="Password"
+                            icon={HiLockClosed}
                             iconPosition="left"
-                            className="rounded-lg border-2 border-black focus:border-black"
                         />
                     </div>
                 </div>
 
-
                 {/* Forgot Password Link */}
                 <div className="mt-5 flex justify-end">
-                    <a href="#" className="text-sm text-blue-500 hover:text-blue-700">Forgot password?</a>
+                    {/* Memperbaiki href untuk menghindari masalah ESLint */}
+                    <button
+                        onClick={handleForgotPassword}
+                        className="text-sm text-blue-500 hover:text-blue-700 bg-transparent border-none cursor-pointer p-0"
+                    >
+                        Forgot password?
+                    </button>
                 </div>
 
                 {/* Login Button */}
-                <Button className=" mt-10 w-full text-md" color="gray">
+                <Button className="mt-10 w-full text-md" color="gray">
                     Login
                 </Button>
             </div>
