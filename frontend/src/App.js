@@ -1,23 +1,23 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/NavbarComponent";  // Impor NavbarComponent
-import Login from "./components/Login";  // Impor halaman Login yang baru saja dibuat
+import Navbar from "./components/NavbarComponent";
 import LandingPage from "./components/LandingPage";
-import 'tailwindcss/tailwind.css';
 import RegisterPage from "./components/RegisterPage";
-
+import Login from "./components/Login";
+import 'tailwindcss/tailwind.css';
 
 const App = () => {
   return (
     <Router>
-      {/* Navbar yang tetap ada di atas */}
+      {/* Navbar akan selalu tampil */}
       <Navbar />
-      {/* Routing untuk halaman-halaman yang ada */}
+
+      {/* Routing halaman */}
       <div>
         <Routes>
-        <Route path="/register" element={<RegisterPage />} />
           <Route path="/" element={<LandingPage />} />
-          <Route path="/login" element={<Login />} />  {/* Halaman login */}
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>
