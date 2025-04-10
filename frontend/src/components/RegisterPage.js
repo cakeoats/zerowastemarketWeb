@@ -1,83 +1,89 @@
 import React from 'react';
 import { TextInput, Button } from 'flowbite-react';
 import { HiUser, HiMail, HiPhone, HiLockClosed } from 'react-icons/hi';
-import { Link } from 'react-router-dom'; // Jika menggunakan React Router
+import { Link } from 'react-router-dom';
 
 function RegisterPage() {
     return (
-        <div className="min-h-screen w-full bg-gradient-to-br from-white to-red-400 flex items-center justify-center">
-            <div className="bg-white p-10 rounded-lg shadow-lg max-w-md w-full">
+        <div className="min-h-screen w-full bg-amber-50 flex items-center justify-center">
+            <div className="bg-white p-10 rounded-xl shadow-lg max-w-md w-full border border-amber-200">
                 {/* Judul */}
-                <div className="flex justify-center mb-6">
-                    <span className="text-2xl font-bold text-gray-800">ZeroWasteMarket</span>
+                <div className="flex justify-center mb-8">
+                    <span className="text-3xl font-bold">
+                        <span className="text-gray-600">Register Here!</span>
+                    </span>
                 </div>
 
                 {/* Form Register */}
-                <div className="space-y-4">
+                <div className="space-y-5">
                     {/* Full Name */}
                     <TextInput
                         id="fullname"
                         type="text"
-                        placeholder="FULL NAME"
+                        placeholder="Full Name"
                         icon={HiUser}
                         iconPosition="left"
-                        className=""
+                        className="focus:ring-2 focus:ring-amber-500"
                     />
 
                     {/* Email */}
                     <TextInput
                         id="email"
                         type="email"
-                        placeholder="E-MAIL"
+                        placeholder="Email"
                         icon={HiMail}
                         iconPosition="left"
-                        className=""
+                        className="focus:ring-2 focus:ring-amber-500"
                     />
 
                     {/* Phone */}
                     <TextInput
                         id="phone"
                         type="tel"
-                        placeholder="PHONE"
+                        placeholder="Phone Number"
                         icon={HiPhone}
                         iconPosition="left"
-                        className=""
+                        className="focus:ring-2 focus:ring-amber-500"
                     />
 
                     {/* Password */}
                     <TextInput
                         id="password"
                         type="password"
-                        placeholder="PASSWORD"
+                        placeholder="Password"
                         icon={HiLockClosed}
                         iconPosition="left"
-                        className=""
+                        className="focus:ring-2 focus:ring-amber-500"
                     />
 
                     {/* Confirm Password */}
                     <TextInput
                         id="confirmPassword"
                         type="password"
-                        placeholder="CONFIRM PASSWORD"
+                        placeholder="Confirm Password"
                         icon={HiLockClosed}
                         iconPosition="left"
-                        className=""
+                        className="focus:ring-2 focus:ring-amber-500"
                     />
                 </div>
 
                 {/* Register Button */}
-                <Button color="red" className="mt-6 w-full bg-gray-800 hover:bg-gray-900">
+                <Button
+                    color="gray"
+                    className="w-full py-1.5 mt-6 font-bold"
+                >
                     REGISTER
                 </Button>
 
                 {/* Link Sign In */}
-                <div className="mt-4 text-center">
-                    <span className="text-sm text-gray-600">
-                        HAVE ACCOUNT?{' '}
-                        <Link to="/login" className="text-blue-500 hover:underline">
-                            SIGN IN
-                        </Link>
-                    </span>
+                <div className="mt-4 text-center text-sm text-gray-600">
+                    Have an account?{' '}
+                    <Link
+                        to="/login"
+                        className="text-blue-600 hover:underline font-medium"
+                    >
+                        Sign In
+                    </Link>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 
-const authRoutes = require('./route/authRoutes'); // ⬅️ pastikan path ini benar
+const authRoutes = require('./routes/authRoutes'); // ⬅️ pastikan path ini benar
 
 const app = express();
 const PORT = process.env.PORT || 5000;

@@ -4,6 +4,7 @@ import Navbar from "./components/NavbarComponent";
 import LandingPage from "./components/LandingPage";
 import RegisterPage from "./components/RegisterPage";
 import Login from "./components/Login";
+import ForgotPasswordPage from "./components/ForgetPasswordPage";
 import 'tailwindcss/tailwind.css';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/" element={<LandingPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         </Routes>
       </div>
     </Router>

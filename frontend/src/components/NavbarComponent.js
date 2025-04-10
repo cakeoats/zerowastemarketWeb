@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Button, Dropdown } from 'flowbite-react';
-import { HiSearch, HiUser, HiOutlineLogin, HiOutlineLogout, HiCog, HiShoppingCart } from 'react-icons/hi';
+import { HiUser, HiOutlineLogin, HiOutlineLogout, HiShoppingCart } from 'react-icons/hi';
 
 function NavbarComponent() {
     // State untuk simulasi dropdown (tanpa auth nyata)

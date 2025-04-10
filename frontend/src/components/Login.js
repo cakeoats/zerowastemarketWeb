@@ -1,59 +1,73 @@
 import React from 'react';
 import { TextInput, Button } from 'flowbite-react';
 import { HiUser, HiLockClosed } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 function LoginPage() {
-    const handleForgotPassword = (e) => {
-        e.preventDefault();
-        // Tambahkan logika untuk lupa password di sini
-        console.log('Forgot password clicked');
-    };
-
     return (
-        <div className="min-h-screen w-full bg-gradient-to-br from-white to-red-400 flex items-center justify-center">
-            <div className="bg-white p-10 rounded-lg shadow-lg max-w-md w-full">
-                <div className="flex justify-center mb-6">
-                    <span className="text-2xl font-bold text-gray-800">ZeroWasteMarket</span>
+        <div className="min-h-screen w-full bg-amber-50 flex items-center justify-center">
+            <div className="bg-white p-10 rounded-xl shadow-lg max-w-md w-full border border-amber-200">
+                {/* Logo/Header */}
+                <div className="flex justify-center mb-8">
+                    <span className="text-3xl font-bold text-gray-500">
+                        Welcome Back
+                    </span>
                 </div>
-                <div className="space-y-5 bg-white">
+
+                {/* Form */}
+                <div className="space-y-6">
                     {/* Username Input */}
-                    <div className="relative">
-                        <TextInput
-                            id="username"
-                            type="text"
-                            placeholder="Username"
-                            icon={HiUser}
-                            iconPosition="left"
-                        />
-                    </div>
+                    <TextInput
+                        id="username"
+                        type="text"
+                        placeholder="Username"
+                        icon={HiUser}
+                        iconPosition="left"
+                        className="focus:ring-2 focus:ring-amber-500"
+                        required
+                    />
 
                     {/* Password Input */}
-                    <div className="relative">
-                        <TextInput
-                            id="password"
-                            type="password"
-                            placeholder="Password"
-                            icon={HiLockClosed}
-                            iconPosition="left"
-                        />
+                    <TextInput
+                        id="password"
+                        type="password"
+                        placeholder="Password"
+                        icon={HiLockClosed}
+                        iconPosition="left"
+                        className="focus:ring-2 focus:ring-amber-500"
+                        required
+                    />
+
+                    {/* Forgot Password Link */}
+                    <div className="flex justify-end">
+                        <Link
+                            to="/forgot-password"
+                            className="text-sm text-blue-600 hover:text-amber-800 transition-colors font-medium"
+                        >
+                            Forgot password?
+                        </Link>
+                    </div>
+
+                    {/* Login Button */}
+                    <Button
+                        color="gray"
+                        className="w-full py-1.5 mt-6 font-semibold"
+                        type="submit"
+                    >
+                        Login
+                    </Button>
+
+                    {/* Register Prompt */}
+                    <div className="text-center text-sm text-gray-600 mt-4">
+                        Don't have an account?{' '}
+                        <Link
+                            to="/register"
+                            className="text-blue-600 hover:underline font-medium"
+                        >
+                            Sign up
+                        </Link>
                     </div>
                 </div>
-
-                {/* Forgot Password Link */}
-                <div className="mt-5 flex justify-end">
-                    {/* Memperbaiki href untuk menghindari masalah ESLint */}
-                    <button
-                        onClick={handleForgotPassword}
-                        className="text-sm text-blue-500 hover:text-blue-700 bg-transparent border-none cursor-pointer p-0"
-                    >
-                        Forgot password?
-                    </button>
-                </div>
-
-                {/* Login Button */}
-                <Button className="mt-10 w-full text-md" color="gray">
-                    Login
-                </Button>
             </div>
         </div>
     );
