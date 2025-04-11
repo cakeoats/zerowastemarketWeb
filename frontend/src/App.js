@@ -6,6 +6,8 @@ import RegisterPage from "./components/RegisterPage";
 import Login from "./components/Login";
 import ForgotPasswordPage from "./components/ForgetPasswordPage";
 import 'tailwindcss/tailwind.css';
+import EmailVerificationPage from "./components/EmailVerificationPage";
+import EmailVerificationSuccess from "./components/EmailVerificationSuccess";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/verif-email" element={<EmailVerificationPage/>} />
+          <Route path="/success-email" element={<EmailVerificationSuccess/>} />
         </Routes>
       </div>
     </Router>
